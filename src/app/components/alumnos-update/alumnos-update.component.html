@@ -1,0 +1,23 @@
+<app-navegacion></app-navegacion>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Datos del alumno </h2>
+
+
+    <!-- Login Form -->
+    <form (ngSubmit)="modificarAlumno()">
+      <input type="text" id="login" class="fadeIn second" name="nombre"  [(ngModel)]="alumno.nombre" placeholder="alumno.nombre" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="apellidos" [(ngModel)]="alumno.apellidos" placeholder="alumno.apellidos" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="curso" [(ngModel)]="alumno.curso" [placeholder]="alumno.curso" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="nota"  [(ngModel)]="alumno.nota" placeholder="alumno.nota" autocomplete="off">
+      
+      <input type="submit" class="fadeIn fourth" value="Guardar">
+    </form>
+  </div>
+  
+  <div class="justify-content-center">
+    <button class="btn btn-default mt-5" routerLink="/">&laquo;Volver</button>
+  </div>
+</div>

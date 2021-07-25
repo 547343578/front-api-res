@@ -1,0 +1,42 @@
+<app-navegacion></app-navegacion>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <table class="table table-bordered table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Curso</th>
+                        <th>Nota</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let alumno of alumnos">
+                        <td>{{alumno.nombre}}</td>
+                        <td>{{alumno.apellidos}}</td>
+                        <td>{{alumno.curso}}</td>
+                        <td>{{alumno.nota}}</td>
+                        <td>
+                           <button class="btn btn-warning" [routerLink]="['/alumno', alumno.id]">Detalles</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="deleteAlumno(alumno.id, alumno.nombre, alumno.apellidos)">Eliminar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-success" [routerLink]="['/alumno-update', alumno.id]">Modificar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success m-4" routerLink="/agregar">Agregar alumno</button>
+        </div>
+    </div>
+</div>
