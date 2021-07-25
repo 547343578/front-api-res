@@ -8,10 +8,10 @@
 
     <!-- Login Form -->
     <form (ngSubmit)="modificarAlumno()">
-      <input type="text" id="login" class="fadeIn second" name="nombre"  [(ngModel)]="alumno.nombre" placeholder="alumno.nombre" autocomplete="off">
-      <input type="text" id="login" class="fadeIn second" name="apellidos" [(ngModel)]="alumno.apellidos" placeholder="alumno.apellidos" autocomplete="off">
-      <input type="text" id="login" class="fadeIn second" name="curso" [(ngModel)]="alumno.curso" [placeholder]="alumno.curso" autocomplete="off">
-      <input type="text" id="login" class="fadeIn second" name="nota"  [(ngModel)]="alumno.nota" placeholder="alumno.nota" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="nombre"  [(ngModel)]="alumno.nombre" placeholder="Nombre" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="apellidos" [(ngModel)]="alumno.apellidos" placeholder="Apellidos" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="curso" [(ngModel)]="alumno.curso" placeholder="Curso" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="nota"  [(ngModel)]="alumno.nota" placeholder="Nota" autocomplete="off">
       
       <input type="submit" class="fadeIn fourth" value="Guardar">
     </form>
